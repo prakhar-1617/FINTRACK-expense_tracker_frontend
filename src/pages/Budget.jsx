@@ -96,8 +96,8 @@ export default function Budget() {
           
           <div className="space-y-2">
             <div className="flex justify-between text-sm font-semibold">
-              <span className="text-slate-600 dark:text-slate-400">Spent: ${spent.toFixed(2)}</span>
-              <span className="text-slate-600 dark:text-slate-400">Limit: ${budget.toFixed(2)}</span>
+              <span className="text-slate-600 dark:text-slate-400">Spent: ₹{spent.toFixed(2)}</span>
+              <span className="text-slate-600 dark:text-slate-400">Limit: ₹{budget.toFixed(2)}</span>
             </div>
             
             <div className="h-4 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
@@ -110,7 +110,7 @@ export default function Budget() {
             <div className="flex justify-between text-xs text-slate-500">
               <span>{percentage.toFixed(1)}% used</span>
               <span>
-                {budget === 0 ? 'No budget set' : remaining >= 0 ? `$${remaining.toFixed(2)} remaining` : `$${Math.abs(remaining).toFixed(2)} over budget`}
+                {budget === 0 ? 'No budget set' : remaining >= 0 ? `₹${remaining.toFixed(2)} remaining` : `₹${Math.abs(remaining).toFixed(2)} over budget`}
               </span>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Budget() {
             ) : isOverBudget ? (
               <div className="flex items-start gap-3 text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-xl border border-red-100 dark:border-red-900/30">
                 <AlertTriangle className="w-5 h-5 flex-shrink-0" />
-                <p className="text-sm font-medium">You have exceeded your monthly budget by ${Math.abs(remaining).toFixed(2)}. Consider cutting down on non-essential expenses.</p>
+                <p className="text-sm font-medium">You have exceeded your monthly budget by ₹{Math.abs(remaining).toFixed(2)}. Consider cutting down on non-essential expenses.</p>
               </div>
             ) : isNearLimit ? (
               <div className="flex items-start gap-3 text-amber-600 bg-amber-50 dark:bg-amber-900/20 p-3 rounded-xl border border-amber-100 dark:border-amber-900/30">
@@ -134,7 +134,7 @@ export default function Budget() {
             ) : (
               <div className="flex items-start gap-3 text-emerald-600 bg-emerald-50 dark:bg-emerald-900/20 p-3 rounded-xl border border-emerald-100 dark:border-emerald-900/30">
                 <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                <p className="text-sm font-medium">You're doing great! You have a healthy remaining budget of ${remaining.toFixed(2)}.</p>
+                <p className="text-sm font-medium">You're doing great! You have a healthy remaining budget of ₹{remaining.toFixed(2)}.</p>
               </div>
             )}
           </div>

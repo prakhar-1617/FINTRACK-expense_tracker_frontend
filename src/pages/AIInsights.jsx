@@ -95,7 +95,7 @@ export default function AIInsights() {
               </h2>
               <div className="flex items-end gap-4">
                 <div className="text-4xl font-bold text-slate-800 dark:text-white">
-                  ${prediction.predicted.toLocaleString()}
+                  ₹{prediction.predicted.toLocaleString()}
                 </div>
                 <div className={`flex items-center text-sm font-semibold mb-1 ${prediction.slope > 0 ? 'text-red-500' : 'text-emerald-500'}`}>
                   {prediction.slope > 0 ? <TrendingUp className="w-4 h-4 mr-1" /> : <TrendingDown className="w-4 h-4 mr-1" />}

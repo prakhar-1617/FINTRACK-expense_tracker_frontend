@@ -73,25 +73,25 @@ export default function Dashboard() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <StatCard
           title="Total Balance"
-          value={`$${balance.toFixed(2)}`}
+          value={`₹${balance.toFixed(2)}`}
           icon={<Wallet />}
           color="indigo"
         />
         <StatCard
           title="Total Income"
-          value={`$${totalIncome.toFixed(2)}`}
+          value={`₹${totalIncome.toFixed(2)}`}
           icon={<TrendingUp />}
           color="emerald"
         />
         <StatCard
           title="Total Expenses"
-          value={`$${totalExpense.toFixed(2)}`}
+          value={`₹${totalExpense.toFixed(2)}`}
           icon={<TrendingDown />}
           color="red"
         />
         <StatCard
           title="Monthly Budget"
-          value={`$${monthlyBudget.toFixed(2)}`}
+          value={`₹${monthlyBudget.toFixed(2)}`}
           icon={<Target />}
           color="amber"
           sub={monthlyBudget > 0 ? `${((totalExpense / monthlyBudget) * 100).toFixed(1)}% used` : 'No budget set'}
@@ -125,7 +125,7 @@ export default function Dashboard() {
                     </div>
                   </div>
                   <div className={`font-bold ${txn.type === 'income' ? 'text-emerald-500' : 'text-slate-800 dark:text-white'}`}>
-                    {txn.type === 'income' ? '+' : '-'}${txn.amount.toFixed(2)}
+                    {txn.type === 'income' ? '+' : '-'}₹{txn.amount.toFixed(2)}
                   </div>
                 </div>
               ))}

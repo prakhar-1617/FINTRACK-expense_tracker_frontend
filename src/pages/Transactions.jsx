@@ -166,7 +166,7 @@ export default function Transactions() {
                       </span>
                     </td>
                     <td className={`p-4 text-right font-bold whitespace-nowrap ${txn.type === 'income' ? 'text-emerald-500' : 'text-slate-800 dark:text-white'}`}>
-                      {txn.type === 'income' ? '+' : '-'}${txn.amount.toFixed(2)}
+                      {txn.type === 'income' ? '+' : '-'}₹{txn.amount.toFixed(2)}
                     </td>
                     <td className="p-4">
                       <div className="flex items-center justify-center gap-2">

@@ -57,7 +57,7 @@ export default function Analytics() {
           <p className="font-semibold text-slate-800 dark:text-white mb-1">{label || payload[0].name}</p>
           {payload.map((entry, index) => (
             <p key={index} style={{ color: entry.color }} className="text-sm font-medium">
-              {entry.name}: ${entry.value.toFixed(2)}
+              {entry.name}: ₹{entry.value.toFixed(2)}
             </p>
           ))}
         </div>
